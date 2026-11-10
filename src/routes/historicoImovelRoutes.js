@@ -45,9 +45,9 @@ routes.post("/",
               $descricao: 'Locação residencial',
               $data_entrada: '2026-01-01',
               $data_saida: '2026-12-31',
-              valor_aluguel: 1800,
-              valor_iptu: 100,
-              valor_condominio: 350,
+              $valor_aluguel: 1800,
+              $valor_iptu: 100,
+              $valor_condominio: 350,
               $imovel_id: '550e8400-e29b-41d4-a716-446655440001',
               $locatario_id: '550e8400-e29b-41d4-a716-446655440002'
           }
