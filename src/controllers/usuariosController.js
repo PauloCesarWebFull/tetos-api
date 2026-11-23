@@ -91,7 +91,7 @@ async function deletar(req, res) {
     });
 
     res.json({
-      type: "succes",
+      type: "success",
       description: "Registro deletado com sucesso.",
     });
   } catch (error) {

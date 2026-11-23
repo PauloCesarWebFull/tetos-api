@@ -19,6 +19,14 @@ async function buscar(req, res) {
       includeObj.locatarios = true;
       
     }
+    if(req.query.tipo === "true"){
+      includeObj.imoveis_tipo = true;
+      
+    }
+    // Se houver pelo menos um relacionamento solicitado, adiciona o include no query
+    if (Object.keys(includeObj).lenght > 0){
+      query.include = includeObj;
+    }
 
     const linhas = await PRISMA.imoveis.findMany(query); //o PRISMA faz coneccao com o banco de dados
     res.json(linhas);
